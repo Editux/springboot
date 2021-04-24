@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @EnableAutoConfiguration
 public class Main {
 
-    @RequestMapping("/")
+    @RequestMapping("/hi")
     public String index() {
         return "Greetings from Spring Boot!";
     }
