@@ -1,25 +1,26 @@
 package sample;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.ExecutionException;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.util.List;
 @RestController
+@RequestMapping("/app")
 public class ArticlesController {
 
 
-        @Autowired
-        ArticleServices articlesService;
+        @Resource
+       ArticlesServices articlesServices;
+    @GetMapping("/articles")
+    public List<Articles> getAll()throws Exception {
 
-        @GetMapping("/getPatientDetails")
-        public Articles getArticlesDetails(@RequestParam String title ) throws InterruptedException, ExecutionException{
-            return articlesService.getArticlesDetails(title);
-        }
+            return articlesServices.findAll();
+
+    }
 
 
 
-        @DeleteMapping("/deletePatient")
-        public String deleteArticle(@RequestParam String title){
-            return articlesService.deleteArticle(title);
-        }
     }
 

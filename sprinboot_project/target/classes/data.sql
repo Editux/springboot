@@ -1,0 +1,1 @@
+insert into article(articleid, title, content) values('1','First Article','Content of the first article');
