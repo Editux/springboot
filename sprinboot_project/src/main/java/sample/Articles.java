@@ -1,21 +1,18 @@
 package sample;
-
-
-
 public class Articles {
 
-    private long id;
+    private String articleid;
     private String title;
 
     private String content;
 
 
-    public long getId() {
-        return id;
+    public String getId() {
+        return articleid;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId(String articleid) {
+        this.articleid = articleid;
     }
 
     public String getTitle() {

@@ -1,12 +1,14 @@
 package sample;
 
-import org.springframework.context.annotation.ComponentScan;
-
 import java.util.List;
-@ComponentScan
+
 public interface ArticlesServices {
     List<Articles> findAll();
+    void insertArticle(Articles art);
 
-    void deleteEmployee(Articles art);
+    void updateArticle(Articles art);
+    void executeupdateArticle(Articles art);
+
+    void deleteArticle(Articles art);
 
 }
